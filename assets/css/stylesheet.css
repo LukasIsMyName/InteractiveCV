@@ -1,0 +1,95 @@
+:root {
+    --text: #f9f1f6;
+    --background: #0b0509;
+    --primary-button: #b8616e;
+    --secondary-button: #000000;
+    --accent: #7b4f37;
+  }
+
+body {
+background-color: var(--background);
+color: var(--text);
+}
+
+.button-primary {
+background-color: var(--primary-button);
+}
+
+.button-secondary {
+background-color: var(--secondary-button);
+}
+
+.accent {
+color: var(--accent);
+}
+
+.side-panel-wrapper{
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 7px;
+    position: fixed;
+    width: 20vw;
+    height: 100%;
+}
+.side-panel{
+    background-color: rgb(90, 90, 90);
+    position:relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.top-intro-wrapper{
+    background-color: rgba(255, 255, 255, 0.05);
+    position:relative;
+    margin-left: 20vw;
+    padding: 7px;
+    width: 80vw;
+    height: 30vh;
+}
+.top-intro{
+    background-color: rgb(90, 90, 90);
+    position:relative;
+    width: 100%;
+    height: 100%;
+}
+
+.card-container {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2vh;
+    margin-left: 20vw;
+    margin-top: 2vh;
+    padding: 2vh;
+    width: 80vw;
+}
+
+.card {
+    background-color: #3d3c3c;
+    height: 30vh;
+}
+
+@media screen and (max-width: 600px) {
+    .side-panel-wrapper {
+        display: none;
+    }
+
+    .top-intro-wrapper {
+        margin-left: 0;
+        padding: 2vw;
+        width: 100vw;
+        height: 10vh;
+    }
+    .top-intro {
+        margin-left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 0;
+        padding: 2vw;
+        width: 100vw;
+    }
+}
