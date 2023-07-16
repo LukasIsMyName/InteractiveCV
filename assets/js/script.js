@@ -34,7 +34,6 @@ window.onload = function() {
 }
 
 function openSidePanel(){
-    
     let top = document.getElementsByClassName("top-intro-wrapper")[0];
     top.classList.toggle('full');
     let info = document.getElementsByClassName("info-wrapper")[0];
