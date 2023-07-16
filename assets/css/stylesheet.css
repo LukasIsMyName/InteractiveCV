@@ -2,39 +2,55 @@
     --background: #0b0509;
     --secondary-button: #a22d2d;
     --ice: #a9e1e5, #cefcff, #abf9ff, #abf9ff;
-    --cards-background: 135deg,#25273c, #4d073d;
-    --border: 90deg,#1c1d2d,#454970, #850968, #590445;
-    --slot-background: 135deg, var(--background), #07060b, var(--background);
-    --accent: #ff00ee;
+    --cards-background: 135deg,#3b4040aa, #3337389a, #393c409a;
+    --cards-background-expanded: 135deg,#062956f7, #0d2e89ec;
+    --border: 90deg,#1c1d2d50,#45497050, #85096850, #59044550;
+    --slot-background: 135deg, var(--background), #07060bae, var(--background);
+    --accent: #4d073d53;
+    --card-title-color: #c228a3,#c228a3;
+    --blue-accent: #009ce6;
+    --image: "./assets/images/background.jpg";
+    --separating-line: 1px solid rgba(170, 108, 183, 0.402);
 }
 @font-face {
     font-family: 'Pixel';
     src: url('../fonts/pixel.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+}
+
 body {
     font-family: 'Pixel';
 }
 
 
 body {
-    background-color: var(--background);
+    background-image: url(../images/background.jpg);
+    background-size: cover;
     color: var(--ice);
 }
 
 .button-primary {
-    position: relative;
+    position: absolute;
+    padding: 10px;
     margin: 0 auto;
-    margin-top: 3vh;
-    background-image: linear-gradient(var(--slot-background));
-    font-size: 0.6em;
+    margin-top: 15vh;
+    margin-left: 8vw;
+    background: transparent;
+    font-size: 1em;
     text-align: center;
     color: var(--ice);
     border-color: transparent;
-    border-radius: 2px;
+    border-radius: 10px;
+    border-right: 0.1px solid rgba(0, 140, 255, 0.918);
+    border-bottom: 0.1px solid rgb(21, 0, 255);
     height: 5vh;
     width: fit-content;
-    
+
+
     transition: color 0.2s ease-in-out;
 }
 
@@ -64,11 +80,13 @@ body {
 
 .side-panel-wrapper{
     /*background-color: rgba(255, 255, 255, 0.05);*/
+    display: none;
     padding: 7px;
     position: fixed;
     width: 20vw;
     height: 100%;
 }
+
 .side-panel{
     position:relative;
     margin: 0 auto;
@@ -85,7 +103,6 @@ body {
 }
 
 .side-panel-profile-wrapper{
-    background-color: #fdfdfd;
     display: flex;
     position: absolute;
     padding: 5px;
@@ -93,20 +110,42 @@ body {
     height: 10vh;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
+    border-bottom: var(--separating-line);
 }
 
+.profile-orb{
+    position: absolute;
+    margin-left: 44vw;
+    top: 0vh;
+    background-image:url("../images/profile.jpg");
+    background-size: cover;
+    background-position: 6.2vw, 2vh;
+    width: 6vw;
+    height: 12vh;
+    border-radius: 4em;
+    
+}
+
+.profile-text{
+    font-size: 1em;
+    margin-left: 1.7vw;
+    color: white;
+}
+
+
+
 .side-panel-about-wrapper{
-    background-color: #d4ff00;
     display: flex;
     top: 10vh;
     position: absolute;
     padding: 5px;
     width: 100%;
     height: 15vh;
+    border-bottom: var(--separating-line);
 }
 
 .side-panel-language-wrapper{
-    background-color: #001aff;
+
     display: flex;
     justify-content: space-evenly;
     top: 25vh;
@@ -114,18 +153,20 @@ body {
     padding: 5px;
     width: 100%;
     height: 15vh;
+    border-bottom: var(--separating-line);
 }
 
 
 .side-panel-grid{
-    background-color: #008cff;
+   
     top: 40vh;
     display: grid;
     position: relative;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 0.05vh;
+    grid-gap: 0.5vh;
     padding: 5px;
     width: 100%;
+    border-bottom: var(--separating-line);
 }
 
 .side-panel-card{
@@ -144,35 +185,37 @@ body {
 }
 
 .side-panel-h{
-    margin: 3px;
-    margin-left: 1vw;
+    position: absolute;
+    margin-top: 1vh;
+    margin-left: 2vw;
     text-align:left;
-    font-size: 0.6em;
+    font-size: 1em;
 }
 
 .side-panel-p{
+    position: relative;
     margin: 3px;
-    margin-top: 5px;
+    margin-top: 1vh;
     margin-right: 1vw;
     text-align: right;
-    font-size: 0.5em;
+    font-size: 1em;
 }
 
 .progress-bar-background{
-    margin-top: 10px;
-    margin-left: 6vw;
+    margin-top: 2vh;
+    margin-left: 7vw;
     position: absolute;
     background-color: #340131;
-    height: 0.1em;
+    height: 0.3vh;
     width: 7vw;
 }
 
 .progress-bar{
-    margin-top: 10px;
-    margin-left: 6vw;
+    margin-top: 2vh;
+    margin-left: 7vw;
     position: absolute;
-    background-color: #ff00ee;
-    height: 0.1em;
+    background-color: var(--blue-accent);
+    height: 0.3vh;
 }
 
 .p75{
@@ -211,71 +254,177 @@ body {
 
 
 .top-intro-wrapper{
-    /*background-color: rgba(255, 255, 255, 0.05);*/
-    position:relative;
-    margin-left: 20vw;
+    position:relative; 
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10vw;
     padding: 7px;
     width: 80vw;
     height: 30vh;
     
 }
 
-.top-intro{
-    position:relative;
-    width: 100%;
-    height: 100%;
+.top-intro-wrapper.full{
+    margin-left: 20vw;
+}
 
+.top-intro{
+    position: relative;
+    flex-basis: 66%;
+    height: 100%;
     /*Janky way of making a linear-grad border with a radius*/
+    border: double 1px transparent;
+    border-radius: 1em;
+}
+
+.intro-title{
+    padding: 7px;
+    margin-top: 3vh;
+    margin-left: 6.5vw;
+    position: relative;
+    font-size: 3em;
+    background: linear-gradient(120deg, #0015ff, var(--blue-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+.intro-description{
+    font-family: "Poppins";
+    text-align: left;
+    padding: 7px;
+    margin-top: 1vh;
+    position: relative;
+    margin-left: 4vw;
+    font-size: 1em;
+    background: linear-gradient(135deg, #0015ff, #0015ff, #0015ff,#1500ff8c,#0015ff6f, #0015ff92);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.slide-show {
+    flex-basis: 32.5%;
+    height: 100%;
+    overflow: hidden;
     border: double 1px transparent;
     border-radius: 1em;
     background-image: linear-gradient(var(--cards-background)),
     linear-gradient(var(--border));
     background-origin: border-box;
     background-clip: content-box, border-box;
-
 }
 
-.card-container {
+.slide-show .slides {
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+
+.slides img{
+    object-fit: fill;
+}
+
+.fade {
+    animation: fade 5s infinite ease-in-out;
+}
+  
+@keyframes fade {
+0%, 100% { opacity: 0 }
+20%, 80% { opacity: 1 }
+}
+
+.info-wrapper{
+    margin-top: 5vh;
+    margin-left: 10vw;
+    position: relative;
+    padding: 7px;
+    width: 80vw;
+    height: 7vh;
+}
+
+.info-wrapper.full{
+    margin-left: 20vw;;
+}
+
+.info-wrapper.side{
+    margin-left: 10vw;
+}
+
+.info{
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+    border-radius: 2em;
+    background-image: linear-gradient(var(--slot-background)),
+    linear-gradient(var(--border));
+}
+
+.info-text-wrapper{
+    height: 100%;
+    display: flex;
+    width: fit-content;
+}
+
+.info-title{
+    padding: 5px;
+    color: var(--blue-accent);
+    font-size: 2.5em;
+}
+.info-description{
+    font-family: "Poppins";
+    padding: 5px;
+    margin-top: 1vh;
+    color: #ffffff;
+    font-size: 1em;
+}
+
+
+.card-wrapper {
     display: grid;
     position: relative;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2vh;
-    margin-left: 20vw;
-    margin-top: 2vh;
+    grid-gap: 2em;
+    margin-left: 15vw;
     padding: 2vh;
-    width: 80vw;
+    width: 70vw;
 }
 
+.card-wrapper.full {
+    margin-left: 25vw;
+}
+
+
 .card {
-    height: 30vh;
+    height: 25vh;
     overflow: auto;
     text-align: center;
     padding: 1px;
     color: rgb(255, 255, 255);
 
     /*Janky way of making a linear-grad border with a radius*/
-    border: double 0.1px transparent;
-    border-radius: 12px;
-    background-image: linear-gradient(var(--cards-background)),
-    linear-gradient(var(--border));
+    border: double 1px transparent;
+    border-radius: 1em;
+    background-image: linear-gradient(var(--cards-background));
     background-origin: border-box;
     background-clip: content-box, border-box;
 
     transition: width 0.7s ease, height 0.7s ease;
 }
 
+
 .card.expanded{
     /*Janky linear grad border with radius*/
     border: double 0.1px transparent;
     border-radius: 12px;
-    background-image: linear-gradient(var(--cards-background)),
+    background-image: linear-gradient(var(--cards-background-expanded)),
     linear-gradient(var(--border));
     background-origin: border-box;
     background-clip: content-box, border-box;
 
     position: fixed;
     top: 18vh;
-    left: 19vw;
+    left: 20vw;
     width: 80vw;
     height: 80vh;
     z-index: 9999;
@@ -285,7 +434,10 @@ body {
 .card.expanded #collapse-button{
     display: block;
     position: absolute;
-    left: 10px;
+    height: fit-content;
+    margin-top: 1vh;
+    margin-left: 1vw;
+
 }
 
 .card.expanded h1{
@@ -304,10 +456,11 @@ body {
 .card h1
 {
     padding: 5px;
-    font-size: 1em;
+    margin-top: 3vh;
+    font-size: 2em;
     font-weight: bolder;
-    text-align: left;
-    background: linear-gradient(120deg, var(--ice));
+    text-align: center;
+    background: linear-gradient(120deg, var(--ice), var(--blue-accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -316,18 +469,17 @@ body {
 {
     padding: 5px;
     padding-top: 10px;
-    font-size: 0.5em;
+    font-size: 1em;
     font-weight: bold;
     text-align: left;
     color: #ffffff;
 }
 
 .socials-wrapper{
-    /*background-color: #ff0000;*/
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     position: absolute;
-    margin-top: 66vh;
+    margin-top: 68vh;
     width: 100%;
     height: 6.5vh;
     border-bottom-left-radius: 1em;
@@ -336,10 +488,11 @@ body {
 
 .socials{
     margin-top: 3vh;
-    background-color: #340131;
+    background-color: var(--cards-background);
     justify-content: flex-end;
     width: 100%;
     height: 3.5vh;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .seg1{
@@ -347,17 +500,85 @@ body {
     border-right: 1px solid rgba(120, 120, 121, 0.402);
 }
 
-.seg2{
+.seg2, .seg3{
     border-right: 1px solid rgba(120, 120, 121, 0.402);
 }
 
-.seg3{
+.seg4{
+
     border-bottom-right-radius: 1em;
 }
 
-.socials:hover{
-    background-color: #2b062a;
+.logo{
+    display:flex;
+    margin-left: 1.7vw;
+    margin-top: 0.3vh;
+    width: 1.7em;
+    height: 1.7em;
 }
+
+
+.tick-logo{
+    margin-top: 1.2vh;
+    margin-left: .5vw;
+    width: 1.2em;
+    height: 1.2em;
+}
+
+
+
+
+.socials:hover{
+    background-color: #06389c;
+}
+
+.socials:active{
+    background-color: #00ffea;
+}
+
+.side-button{
+    display: block;
+    position: absolute;
+    top: 2vh;
+    left: 1vw;
+    width: 3vw;
+    height: 6vh;
+    border-radius: 3em;
+    border-color: transparent;
+    background-image: linear-gradient(#0a8aec58, #0cd2d27b);
+    transition: color 2s ease-in-out;
+}
+
+.side-button-close{
+    display: none;
+    position: absolute;
+    z-index: 3;
+    top: 2vh;
+    left: 1vw;
+    width: 3vw;
+    height: 6vh;
+    border-radius: 3em;
+    border-color: transparent;
+    background-image: linear-gradient(#0a8aec58, #0cd2d27b);
+    transition: color 2s ease-in-out;
+}
+
+.side-button:hover, .side-button-close:hover{
+    background-image: linear-gradient(#085d9f58, #0881817b);
+}
+
+
+.side-image{
+    padding: 1px;
+    width: 100%;
+    height: 100%;
+}
+
+.side-button img, .side-button-close img{
+    width: 100%;
+    height: 100%;
+}
+
 
 @media screen and (max-width: 600px) {
     .side-panel-wrapper {
@@ -421,7 +642,7 @@ body {
     .card.expanded #collapse-button{
         display: block;
         position: absolute;
-        margin-top: 0;
+        margin-top: 0 0;
     }
     
     .card.expanded h1{
