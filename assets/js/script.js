@@ -33,39 +33,39 @@ window.onload = function() {
     }
 }
 
+// Toggles .full element for the corresponding class
+//to avoid redundancy.
+function toggleFull(className) {
+    let element = document.getElementsByClassName(className)[0];
+    element.classList.toggle('full');
+}
+
 function openSidePanel(){
-    let top = document.getElementsByClassName("top-intro-wrapper")[0];
-    top.classList.toggle('full');
-    let info = document.getElementsByClassName("info-wrapper")[0];
-    info.classList.toggle('full');
-    let grid = document.getElementsByClassName("card-wrapper")[0];
-    grid.classList.toggle('full');
+    toggleFull("top-intro-wrapper");
+    toggleFull("info-wrapper");
+    toggleFull("card-wrapper");
+
     let sideButton = document.getElementsByClassName("side-button")[0];
     sideButton.style.display = "none";
+
     let closeButton = document.getElementsByClassName("side-button-close")[0];
     closeButton.style.display = "block";
-    let sidePanel = document.getElementsByClassName("side-panel-wrapper")[0];
-    sidePanel.style.display = "block";
 
-    console.log("Open");
+    let sidePanel = document.getElementsByClassName("side-panel-wrapper")[0];
+    sidePanel.style.left = "0";
 }
 
 function closeSidePanel(){
+    toggleFull("top-intro-wrapper");
+    toggleFull("info-wrapper");
+    toggleFull("card-wrapper");
+
     let closeButton = document.getElementsByClassName("side-button-close")[0];
     closeButton.style.display = "none";
     let sidePanel = document.getElementsByClassName("side-panel-wrapper")[0];
-    sidePanel.style.display = "none";
+    sidePanel.style.left = "-100%";
     
     let sideButton = document.getElementsByClassName("side-button")[0];
     sideButton.style.display = "block";
-
-    let top = document.getElementsByClassName("top-intro-wrapper")[0];
-    top.classList.toggle('full');
-    let info = document.getElementsByClassName("info-wrapper")[0];
-    info.classList.toggle('full');
-    let grid = document.getElementsByClassName("card-wrapper")[0];
-    grid.classList.toggle('full');
-
-    console.log("Close");
 }
 

@@ -81,11 +81,13 @@ body {
 
 .side-panel-wrapper{
     /*background-color: rgba(255, 255, 255, 0.05);*/
-    display: none;
+    display: block;
     padding: 7px;
     position: fixed;
+    left: -100%;
     width: 20vw;
     height: 100%;
+    transition: left 0.6s ease; 
 }
 
 .side-panel{
@@ -143,6 +145,7 @@ body {
     width: 100%;
     height: 15vh;
     border-bottom: var(--separating-line);
+    transition: width 0.7s ease, height 0.7s ease;
 }
 
 .side-panel-language-wrapper{
@@ -156,6 +159,47 @@ body {
     height: 15vh;
     border-bottom: var(--separating-line);
 }
+
+.side-panel-skills-wrapper{
+    position: relative;
+    margin-top: 40vh;
+    width: 100%;
+    height: 30vh;
+}
+
+.side-panel-skills{
+    padding: 7px;
+    margin: 0 auto;
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.5em;
+    width: fit-content;
+    height: fit-content;
+}
+
+.skills-text{
+    
+    font-family: "Poppins";
+    height: fit-content;
+    width: 100%;
+    font-size: 0.7em;
+    text-align: center;
+    color: #ffffff;
+}
+
+.skills-text-title{
+    position: relative;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: "Poppins";
+    color: #ffffff;
+    background-image: linear-gradient(var(--slot-background)),
+    linear-gradient(var(--border));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
 
 
 .side-panel-grid{
@@ -235,24 +279,6 @@ body {
     width: 3.5vw;   
 }
 
-/*
-.c75{
-  color: rgb(255, 30, 0);  
-}
-
-.c70{
-    color: rgb(255, 80, 0);  
-}
-
-.c65{
-    color: rgb(255, 130, 0);  
-}
-
-.c50{
-    color: rgb(212, 255, 0);  
-}
-*/
-
 
 .top-intro-wrapper{
     position:relative; 
@@ -262,7 +288,6 @@ body {
     padding: 7px;
     width: 80vw;
     height: 30vh;
-    
 }
 
 .top-intro-wrapper.full{
@@ -398,6 +423,7 @@ body {
     margin-left: 15vw;
     padding: 2vh;
     width: 70vw;
+    
 }
 
 .card-wrapper.full {
@@ -487,21 +513,21 @@ body {
 
 .socials-wrapper{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    position: absolute;
-    margin-top: 68vh;
+    padding: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
     width: 100%;
-    height: 6.5vh;
+    height: 3.5vh;
+    border-top: var(--separating-line);
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
 }
 
 .socials{
-    margin-top: 3vh;
+    padding: 2px;
     background-color: var(--cards-background);
-    justify-content: flex-end;
     width: 100%;
-    height: 3.5vh;
+    height: 100%;
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -510,21 +536,21 @@ body {
     border-right: 1px solid rgba(120, 120, 121, 0.402);
 }
 
-.seg2, .seg3{
+.seg2{
     border-right: 1px solid rgba(120, 120, 121, 0.402);
 }
 
-.seg4{
+.seg3{
 
     border-bottom-right-radius: 1em;
 }
 
 .logo{
     display:flex;
-    margin-left: 1.7vw;
+    margin-left: 2.3vw;
     margin-top: 0.3vh;
-    width: 1.7em;
-    height: 1.7em;
+    width: 1.5em;
+    height: 1.5em;
 }
 
 
@@ -534,9 +560,6 @@ body {
     width: 1.2em;
     height: 1.2em;
 }
-
-
-
 
 .socials:hover{
     background-color: #06389c;
@@ -562,32 +585,41 @@ body {
 .side-button-close{
     display: none;
     position: absolute;
+    background-color: transparent;
     z-index: 3;
     top: 2vh;
     left: 1vw;
-    width: 3vw;
-    height: 6vh;
+    width: fit-content;
+    height: 3vh;
     border-radius: 3em;
     border-color: transparent;
-    background-image: linear-gradient(#0a8aec58, #0cd2d27b);
-    transition: color 2s ease-in-out;
 }
 
-.side-button:hover, .side-button-close:hover{
-    background-image: linear-gradient(#085d9f58, #0881817b);
+.side-button:hover{
+    background-image: linear-gradient(#82a8c6, #81dada);
 }
-
+.side-button-close:hover{
+    background-image: linear-gradient(#82a8c6, #81dada);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 .side-image{
     padding: 1px;
     width: 100%;
     height: 100%;
 }
-
-.side-button img, .side-button-close img{
+.side-button img{
     width: 100%;
     height: 100%;
 }
+
+.back-text{
+    font-family: "Poppins";
+    color: var(--blue-accent);
+    font-size: 1em;
+}
+
 
 
 @media screen and (max-width: 600px) {
