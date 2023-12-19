@@ -484,6 +484,12 @@ body {
     border: double 1px;
     border-radius: 1em;
     border-color: var(--blue-accent);
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.card-project-link:hover{
+    transform: scale(1.05); 
+    transition: transform 0.3s, filter 0.3s;
 }
 
 
@@ -504,11 +510,12 @@ body {
     top: 0.8vh;
     margin: 0 auto;
     font-family: "Poppins";
+    text-decoration: none;
     font-size: 1.2em;
     color: #FFFFFF;
 }
 .card-project-link-text:hover{
-    color: var(--hover-accent);
+    color: var(--blue-accent);
 }
 
 
@@ -669,6 +676,7 @@ body {
 
     .card h1{
         margin-top: 1vh;
+        font-size: 1.7em;
     }
 
     .card-wrapper{
@@ -710,7 +718,7 @@ body {
 
     .side-button{
         left: 2vw;
-        width: 8.5vw;
+        width: 10.5vw;
         height: 4vh;
     }
 
@@ -724,16 +732,16 @@ body {
     }
 
     .intro-description{
-        margin-top: 0vh;
+        margin-top: 2vh;
         margin-left: -11vw;
         width: 100vw;
         font-size: 0.6em;
     }
 
     .info-wrapper{
-        margin-top: 0vh;
-        margin-left: 0vw;
-        width: 100vw;
+        margin-top: -2vh;
+        margin-left: -1vw;
+        width: 102vw;
         height: 5vh;
     }
 
