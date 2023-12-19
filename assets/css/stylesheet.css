@@ -664,16 +664,10 @@ body {
     background-color: #0015ff3c;
 }
 
-/* Screen breakpoint for Iphone 14 Pro Max*/
+/* Screen breakpoint for Iphone 14 Pro Max/ L Mobiles*/
 
 @media screen and (max-width: 430px) {
-    .intro-description{
-        font-size: 0.7em;
-    }
-    .intro-title{
-        font-size: 2.70em;
-    }
-
+  
     .card h1{
         margin-top: 1vh;
         font-size: 1.7em;
@@ -684,19 +678,26 @@ body {
         position: relative;
         height: auto;
         grid-template-columns: repeat(1, 1fr);
-        top: 25vh;
-        width: 96vw;
-        left: -13vw;
+        top: 27vh;
+        width: 80vw;
+        left: -4vw;
     }
 
     .card-project-link{
         margin-left: 3vw;
     }
 
+    .card-project-para{
+        font-size: 0.7em;
+    }
+
     .card-project-language-bubble{
         width: 18vw;
         height: 2.3vh;
-        margin-left: 30vw;
+        margin-left: 23vw;
+        margin-top: 5.5vh;
+        text-align: center;
+        font-size: 0.8em;
     }
 
     .slide-show{
@@ -706,7 +707,7 @@ body {
         flex-basis: 32.5%;
         display: block;
         top: 36vh;
-        left: 0vw;
+        left: 10vw;
     }
     
     .profile-orb{
@@ -718,35 +719,40 @@ body {
 
     .side-button{
         left: 2vw;
-        width: 10.5vw;
+        width: 8.5vw;
         height: 4vh;
     }
 
+    .top-intro-wrapper{
+        margin-left: 0vw;
+        z-index: -1;
+    }
+
     .intro-title{
-        margin-left: 8.5vw;
+        margin-left: 18.5vw;
         margin-top: 3vh;
         padding: 0px;
-        font-size: 2em;
+        font-size: 1.6em;
         overflow-wrap: break-word;
         width: 60vw;
     }
 
     .intro-description{
         margin-top: 2vh;
-        margin-left: -11vw;
-        width: 100vw;
-        font-size: 0.6em;
+        margin-left: 9vw;
+        width: 100%;
+        font-size: 0.5em;
     }
 
     .info-wrapper{
         margin-top: -2vh;
-        margin-left: -1vw;
-        width: 102vw;
+        margin-left: 6vw;
+        width: 87vw;
         height: 5vh;
     }
 
     .info-description{
-        font-size: 0.41em;
+        font-size: 0.3em;
         margin-top: 0.8vh;
         overflow: visible;
     }
@@ -833,12 +839,119 @@ body {
     }
 
     .skills-text{
-        font-size: 0.7em;
+        font-size: 0.6em;
     }
 
     .logo{
         margin-left: 12vw;
     }
+}
+
+
+/* Screen breakpoint for L Laptops */
+
+@media screen and (min-width: 1440px){
+    .profile-orb{
+        width: 5vw;
+        height: 8vh;
+        margin-left: 50vw;
+        margin-top: 2vh;
+    }
+
+    .intro-title {
+        font-size: 2.5em;
+    }
+
+    .intro-description{
+        font-size: 0.95em;
+    }
+
+    .info-title{
+        font-size: 2em;
+    }
+
+    .info-description{
+        margin-top: 0.8vh;
+        font-size: 0.8em;
+        overflow: visible;
+    }
+
+    .card h1{
+        font-size: 1.2em;
+    }
+
+    .card-project-para{
+        font-size: 0.7em;
+    }
+
+    .card-project-language-bubble{
+        font-size: 0.8em;
+        margin-top: 5.5vh;
+    }
+
+    .side-button{
+        width: 3vw;
+        height: 4.7vh;
+    }
+
+    .top-intro-wrapper.full{
+        margin-left: 20vw;
+        width: 60vw; 
+        .intro-description{
+            font-size: 0.7em;
+        }
+        .intro-title {
+            font-size: 1.8em;
+        }
+        .slide-show{
+            flex-basis: 45.5%;
+        }
+        .profile-orb{
+            margin-left: 35vw;
+        }
+    }
+
+    .side-panel-top-title{
+        top: 6vh;
+        font-size: 1.8em;
+    }
+
+    .side-panel-language-title{
+        font-size: 0.8em;
+        margin-top: 1.2vh;
+    }
+
+    .side-panel-language-para {
+        font-size: 0.7em;
+    }
+
+    .side-panel-h {
+        font-size: 0.9em;
+    }
+
+    .skills-text-title {
+        font-size: 1.0em;
+    }
+
+    .skills-text {
+        font-size: 0.5em;
+    }
+
+    .tick-logo {
+        margin-top: 1.3vh;
+        margin-left: 0.5vw;
+        width: 1em;
+        height: 1em;
+    }
+
+    .logo {
+        margin-top: -0.5vh;
+    }
+
+    .back-text {
+        font-size: 0.8em;
+    }
+
 }
 
 
