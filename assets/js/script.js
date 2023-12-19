@@ -1,18 +1,4 @@
 
-function expand(button) 
-{
-    let card = button.parentNode;
-    card.classList.toggle('expanded');
-    
-   
-};
-
-function collapse(button)
-{
-    let card = button.parentNode;
-    card.classList.toggle('expanded');
-}
-
 //Fade in/out
 window.onload = function() {
     let slideIndex = 0;
