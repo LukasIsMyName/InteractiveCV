@@ -28,6 +28,8 @@ body {
     font-family: 'Pixel';
     background-image: url(../images/background.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: var(--ice);
 }
 
@@ -101,7 +103,8 @@ body {
     top: 0vh;
     background-image:url("../images/profile.jpg");
     background-size: cover;
-    background-position: 6.2vw, 2vh;
+    background-position: center center;
+    background-repeat: no-repeat;
     width: 6vw;
     height: 12vh;
     border-radius: 4em;
@@ -596,8 +599,8 @@ body {
     position: absolute;
     top: 2vh;
     left: 1vw;
-    width: 3vw;
-    height: 6vh;
+    width: 2.5vw;
+    height: 4.7vh;
     border-radius: 3em;
     border-color: transparent;
     background-image: linear-gradient(#0a8aec58, #0cd2d27b);
@@ -651,8 +654,183 @@ body {
     bottom: 0;
     z-index: -1;
     font-family: "Poppins";
+    background-color: #0015ff3c;
 }
 
+/* Screen breakpoint for Iphone 14 Pro Max*/
 
+@media screen and (max-width: 430px) {
+    .intro-description{
+        font-size: 0.7em;
+    }
+    .intro-title{
+        font-size: 2.70em;
+    }
+
+    .card h1{
+        margin-top: 1vh;
+    }
+
+    .card-wrapper{
+        display: grid;
+        position: relative;
+        height: auto;
+        grid-template-columns: repeat(1, 1fr);
+        top: 25vh;
+        width: 96vw;
+        left: -13vw;
+    }
+
+    .card-project-link{
+        margin-left: 3vw;
+    }
+
+    .card-project-language-bubble{
+        width: 18vw;
+        height: 2.3vh;
+        margin-left: 30vw;
+    }
+
+    .slide-show{
+        position: absolute;
+        width: 100%;
+        height: 50vw;
+        flex-basis: 32.5%;
+        display: block;
+        top: 36vh;
+        left: 0vw;
+    }
+    
+    .profile-orb{
+        margin-left: 72vw;
+        top: 4vh;
+        width: 10vw;
+        height: 5vh;
+    }
+
+    .side-button{
+        left: 2vw;
+        width: 8.5vw;
+        height: 4vh;
+    }
+
+    .intro-title{
+        margin-left: 8.5vw;
+        margin-top: 3vh;
+        padding: 0px;
+        font-size: 2em;
+        overflow-wrap: break-word;
+        width: 60vw;
+    }
+
+    .intro-description{
+        margin-top: 0vh;
+        margin-left: -11vw;
+        width: 100vw;
+        font-size: 0.6em;
+    }
+
+    .info-wrapper{
+        margin-top: 0vh;
+        margin-left: 0vw;
+        width: 100vw;
+        height: 5vh;
+    }
+
+    .info-description{
+        font-size: 0.41em;
+        margin-top: 0.8vh;
+        overflow: visible;
+    }
+
+    .info-title{
+        position: relative;
+        top: 1vh;
+        padding: 0px;
+        font-size: 0.93em;
+        padding-left: 1px;
+    }
+
+    /* Side bar section */
+
+    .side-panel-wrapper{
+        width: 100vw;
+    }
+
+    .top-intro-wrapper.full{
+        margin-left: 20vw;
+        display: none;
+    }
+
+    .info-wrapper.full{
+        display: none;
+    }
+
+    .card-wrapper.full {
+        margin-left: 25vw;
+        display: none;
+    }
+
+    .copyright-footer{
+        position:fixed;
+        top: 95vh;
+    }
+
+
+    .side-panel-language-para{
+        margin-top: 1vh;
+        margin-left: 43vw;
+    }
+
+    .side-panel-language-title{
+        margin-left: 11vw;
+        margin-top: 1vh;
+    }
+
+    .side-panel-language{
+        padding-left: 12vw;
+    }
+
+    .tick-logo{
+        margin-left: 3.5vw;
+    }
+
+    .progress-bar-background{
+        margin-left: 54vw;
+        width: 16vw;
+    }
+
+    .progress-bar{
+        margin-left: 35vw;
+    }
+
+    .side-panel-h{
+        margin-left: 10vw;
+    }
+
+    .p75{
+        width: 28vw;
+    }
+
+    .p70{
+        width: 23.5vw;
+    }
+
+    .p65{
+        width: 21vw;
+    }
+
+    .p50{
+        width: 18.5vw;
+    }
+
+    .skills-text{
+        font-size: 0.7em;
+    }
+
+    .logo{
+        margin-left: 12vw;
+    }
+}
 
 
