@@ -23,12 +23,9 @@
     src: url('../fonts/Poppins-Regular.ttf') format('truetype');
 }
 
+
 body {
     font-family: 'Pixel';
-}
-
-
-body {
     background-image: url(../images/background.jpg);
     background-size: cover;
     color: var(--ice);
@@ -644,6 +641,18 @@ body {
     color: var(--blue-accent);
     font-size: 1em;
 }
+
+.copyright-footer{
+    position: fixed;
+    padding-top: 1.5vh;
+    text-align: center;
+    width: 100%;
+    height: 5vh;
+    bottom: 0;
+    z-index: -1;
+    font-family: "Poppins";
+}
+
 
 
 
