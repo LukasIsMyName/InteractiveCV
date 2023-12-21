@@ -127,6 +127,7 @@ body {
     height: 15vh;
     border-bottom: var(--separating-line);
     transition: width 0.7s ease, height 0.7s ease;
+    background: #79CFF5;
 }
 
 .side-panel-language-wrapper{
@@ -666,7 +667,7 @@ body {
 
 /* Screen breakpoint for Iphone 14 Pro Max/ L Mobiles*/
 
-@media screen and (max-width: 425px){
+@media screen and (min-width: 425px) and (max-width:767px){
   
     .card h1{
         margin-top: 1vh;
@@ -681,6 +682,7 @@ body {
         top: 27vh;
         width: 80vw;
         left: -4vw;
+        padding-top: 25vh;
     }
 
     .card-project-link{
@@ -712,15 +714,15 @@ body {
     
     .profile-orb{
         margin-left: 72vw;
-        top: 4vh;
-        width: 10vw;
-        height: 5vh;
+        top: 3vh;
+        width: 50px;
+        height: 50px;
     }
 
     .side-button{
         left: 2vw;
-        width: 8.5vw;
-        height: 4vh;
+        width: 37px;
+        height: 37px;
     }
 
     .top-intro-wrapper{
@@ -850,65 +852,206 @@ body {
 
     .side-panel-skills{
         padding-top: 1vh;
+        width: auto;
+    }
+
+    .side-panel-about-gif{
+        object-fit: scale-down;
     }
 }
 
 /* Screen breakpoint for M Phones */
 
-@media screen and (max-width: 375px){
+@media screen and (min-width: 320px) and (max-width:424px){
 
-    .side-button{
-        width: 9.5vw;
+    .card h1{
+        margin-top: 1vh;
+        font-size: 1.7em;
     }
 
-    .info-description{
-        font-size: 0.25em;
+    .card-wrapper{
+        display: grid;
+        position: relative;
+        height: auto;
+        grid-template-columns: repeat(1, 1fr);
+        top: 27vh;
+        width: 80vw;
+        left: -4vw;
+        padding-top: 5vh;
     }
 
-    .info-title {
-        font-size: 0.83em;
+    .card-project-link{
+        margin-left: 3vw;
     }
 
-    .profile-orb {
-        margin-left: 74vw;
-        width: 11vw;
-    }
-
-    .card h1 {
-        font-size: 1.4em;
-    }
-
-    .card-project-para {
-        font-size: 0.6em;
-    }
-
-    /*Side panel*/
-
-    .side-panel-language-title {
-        font-size: 1.1em;
-    }
-
-    .side-panel-language-para {
+    .card-project-para{
         font-size: 0.7em;
     }
 
-    .side-panel-h {
-        margin-top: 1vh;
-        font-size: 0.9em;
+    .card-project-language-bubble{
+        width: 18vw;
+        height: 2.3vh;
+        margin-left: 23vw;
+        margin-top: 5.5vh;
+        text-align: center;
+        font-size: 0.8em;
     }
 
-    .tick-logo {
+    .slide-show{
+        position: absolute;
+        width: 100%;
+        height: 50vw;
+        flex-basis: 32.5%;
+        display: block;
+        top: 36vh;
+        left: 10vw;
+    }
+    
+    .profile-orb{
+        margin-left: 72vw;
+        top: 4vh;
+        width: 10vw;
+        height: 5vh;
+    }
+
+    .side-button{
+        left: 2vw;
+        width: 35px;
+        height: 35px;
+    }
+
+    .top-intro-wrapper{
+        margin-left: 0vw;
+        z-index: -1;
+    }
+
+    .intro-title{
+        margin-left: 18.5vw;
+        margin-top: 3vh;
+        padding: 0px;
+        font-size: 1.6em;
+        overflow-wrap: break-word;
+        width: 60vw;
+    }
+
+    .intro-description{
+        margin-top: 2vh;
+        margin-left: 9vw;
+        width: 100%;
+        font-size: 0.4em;
+    }
+
+    .info-wrapper{
+        margin-top: -2vh;
+        margin-left: 6vw;
+        width: 87vw;
+        height: 5vh;
+    }
+
+    .info-description{
+        font-size: 0.3em;
+        margin-top: 0.8vh;
+        overflow: visible;
+    }
+
+    .info-title{
+        position: relative;
+        top: 1vh;
+        padding: 0px;
+        font-size: 0.93em;
+        padding-left: 1px;
+    }
+
+    /* Side bar section */
+
+    .side-panel-wrapper{
+        width: 100vw;
+    }
+
+    .top-intro-wrapper.full{
+        margin-left: 20vw;
+        display: none;
+    }
+
+    .info-wrapper.full{
+        display: none;
+    }
+
+    .card-wrapper.full {
+        margin-left: 25vw;
+        display: none;
+    }
+
+    .copyright-footer{
+        position:fixed;
+        top: 95vh;
+    }
+
+
+    .side-panel-language-para{
+        margin-top: 1vh;
+        margin-left: 43vw;
+        font-size: 0.8em;
+    }
+
+    .side-panel-language-title{
+        margin-left: 11vw;
         margin-top: 1vh;
     }
 
-    .side-panel-skills {
-        padding-top: 1vh;
-    }    
+    .side-panel-language{
+        padding-left: 12vw;
+    }
 
-    .logo {
+    .tick-logo{
+        margin-left: 3.5vw;
+    }
+
+    .progress-bar-background{
+        margin-left: 54vw;
+        width: 16vw;
+    }
+
+    .progress-bar{
+        margin-left: 35vw;
+    }
+
+    .side-panel-h{
+        margin-left: 10vw;
+    }
+
+    .p75{
+        width: 28vw;
+    }
+
+    .p70{
+        width: 23.5vw;
+    }
+
+    .p65{
+        width: 21vw;
+    }
+
+    .p50{
+        width: 18.5vw;
+    }
+
+    .skills-text{
+        font-size: 0.6em;
+    }
+
+    .logo{
+        margin-left: 12vw;
         margin-top: -0.3vh;
     }
 
+    .side-panel-skills{
+        padding-top: 1vh;
+    }
+
+    .side-panel-about-gif{
+        object-fit: scale-down;
+    }
 }
 
 
@@ -916,8 +1059,8 @@ body {
 
 @media screen and (min-width: 1440px){
     .profile-orb{
-        width: 5vw;
-        height: 8vh;
+        width: 75px;
+        height: 75px;
         margin-left: 50vw;
         margin-top: 2vh;
     }
@@ -954,8 +1097,8 @@ body {
     }
 
     .side-button{
-        width: 3vw;
-        height: 4.7vh;
+        width: 42px;
+        height: 42px;
     }
 
     .top-intro-wrapper.full{
@@ -1040,9 +1183,9 @@ body {
     }
     
     .profile-orb {
-        top: 6vh;
-        width: 6vw;
-        height: 6vh;
+        top: 5vh;
+        width: 60px;
+        height: 60px;
     }
 
     .info-description {
@@ -1087,7 +1230,8 @@ body {
     }
     
     .side-panel-wrapper{
-        width: 100vw;
+        width: 60vw;
+        margin-left: 20vw;
         z-index: 9999;
     }
 
@@ -1113,6 +1257,110 @@ body {
     .card-wrapper.full {
         margin-left: 0vw;
         display: none;
+    }
+
+    .side-button {
+        width: 37px;
+        height: 37px;
+    }
+
+    .side-panel-about-gif{
+        object-fit: scale-down;
+    }
+
+    .side-panel-about-wrapper{
+        background: #79CFF5;
+    }
+
+    .side-panel-top-title{
+        top: 6vh;
+        font-size: 1.8em;
+    }
+
+    .side-panel-language {
+        padding-left: 15vw;
+    }
+
+    .side-panel-language-title{
+        font-size: 0.8em;
+        margin-top: 1.3vh;
+        margin-left: 3vw;
+    }
+
+    .side-panel-language-para {
+        font-size: 0.7em;
+        margin-top: 1.3vh;
+        margin-left: 17vw;
+    }
+
+    .side-panel-h {
+        font-size: 0.9em;
+    }
+
+    .skills-text-title {
+        font-size: 1.0em;
+    }
+
+    .skills-text {
+        font-size: 0.7em;
+    }
+
+    .tick-logo {
+        margin-top: 1.3vh;
+        margin-left: 0.5vw;
+        width: 1em;
+        height: 1em;
+    }
+
+    .logo {
+        margin-top: -0.5vh;
+    }
+
+    .back-text {
+        font-size: 0.8em;
+    }
+
+    .side-panel-skills{
+        padding-top: 1vh;
+    }
+
+    .side-panel-skills {
+        grid-gap: 0.3em;
+        width: auto;
+    }
+
+    .side-panel-h {
+        margin-top: 1.1vh;
+        margin-left: 4vw;
+    }
+
+    .progress-bar-background {
+        margin-left: 30vw;
+        width: 16vw;
+    }
+
+    .progress-bar {
+        margin-left: 14vw;
+    }
+
+    .p75 {
+        width: 26vw;
+    }
+
+    .p70 {
+        width: 23.5vw;
+    }
+
+    .p65 {
+        width: 19vw;
+    }
+
+    .p50 {
+        width: 16vw;
+    }
+
+    .logo{
+        margin-left: 7.5vw;
     }
 }
 
