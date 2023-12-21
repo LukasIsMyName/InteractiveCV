@@ -462,7 +462,7 @@ body {
     text-align: center;
     padding: 1px;
     color: rgb(255, 255, 255);
-
+    background-color: transparent;
     /*Janky way of making a linear-grad border with a radius*/
     border: double 1px transparent;
     border-radius: 1em;
