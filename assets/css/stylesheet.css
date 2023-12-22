@@ -349,6 +349,13 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
+.intro-description span{
+    -webkit-text-fill-color: var(--blue-accent);
+    font-size: 0.9em;
+    font-weight: 100;
+    overflow:visible;
+}
+
 .slide-show {
     flex-basis: 32.5%;
     height: 100%;
@@ -933,7 +940,7 @@ body {
         margin-left: 18.5vw;
         margin-top: 3vh;
         padding: 0px;
-        font-size: 1.6em;
+        font-size: 1.5em;
         overflow-wrap: break-word;
         width: 60vw;
     }
@@ -942,7 +949,7 @@ body {
         margin-top: 2vh;
         margin-left: 9vw;
         width: 100%;
-        font-size: 0.4em;
+        font-size: 0.5em;
     }
 
     .info-wrapper{
