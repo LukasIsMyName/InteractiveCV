@@ -6,8 +6,8 @@
 ✨Built up from scratch<br>
 ✨Custom Fonts<br>
 ✨Slide show showcasing past projects<br>
-✨Skills section side bar
-✨Cards with links to other projects on GitHub
-✨Vanilla HTML/CSS & JavaScript
+✨Skills section side bar<br>
+✨Cards with links to other projects on GitHub<br>
+✨Vanilla HTML/CSS & JavaScript<br>
 
 ### --------- ###
