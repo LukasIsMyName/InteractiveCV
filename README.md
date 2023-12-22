@@ -4,6 +4,7 @@
 
    Personal Website Project<br>
 ✨Built up from scratch<br>
+✨Responsive design (Works on all devices)<br>
 ✨Custom Fonts<br>
 ✨Slide show showcasing past projects<br>
 ✨Skills section side bar<br>
